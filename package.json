@@ -1,7 +1,6 @@
 {
   "name": "parcel-prueba",
   "version": "1.0.0",
-  "main": "index.js",
   "license": "MIT",
   "devDependencies": {
     "@parcel/transformer-pug": "2.8.3",
