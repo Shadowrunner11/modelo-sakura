@@ -32,7 +32,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           # La clave SSH para autenticar el despliegue, definida como un secreto en el repositorio
-          deploy_key: ${{ secrets.DEPLOY_KEY }}
+          deploy_key: ${{ secrets.GITHUB_TOKEN }}
           # La carpeta donde se encuentran los archivos compilados
           publish_dir: ./dist
           # La rama donde se desplegarán los archivos (en este caso, la rama gh-pages)
