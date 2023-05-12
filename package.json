@@ -10,6 +10,6 @@
   },
   "scripts": {
     "dev": "parcel src/*.pug",
-    "build": "parcel build src/*.pug --out-dir dist"
+    "build": "parcel build src/*.pug -d dist"
   }
 }
