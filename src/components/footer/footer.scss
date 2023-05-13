@@ -26,8 +26,19 @@
       text-transform: uppercase;
       font-size: clamp(3rem, 7vw, 4.8rem);
       letter-spacing: .5rem;
-      font-weight: 500;
+      font-weight: 400;
       @include m.border;
+      position: relative;
+      @include m.center;
+
+      &:after {
+        content: '&';
+        position: absolute;
+        left: 32%;
+        font-family: f.$font-quaternary;
+        transform: rotateZ(-7deg);
+        font-size: clamp(7rem, 15vw, 10rem);
+      }
     }
 
     button {
