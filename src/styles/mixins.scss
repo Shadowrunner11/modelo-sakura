@@ -11,7 +11,7 @@
 
 @mixin border($border: 1px, $style: dashed, $color: red) {
   border: $border $style $color;
-  border: none;
+  // border: none;
 }
 
 @mixin button {
