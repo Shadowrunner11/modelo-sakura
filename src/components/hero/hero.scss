@@ -119,6 +119,7 @@
     @include m.center;
     justify-content: space-between;
     aspect-ratio: 2/1;
+    border: 1px dashed black;
 
     p {
       font-size: 2rem;
