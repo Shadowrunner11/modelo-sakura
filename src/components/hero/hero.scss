@@ -3,25 +3,25 @@
 @use '/src/styles/mixins.scss' as m;
 
 .hero {
-  border: 3px solid blue;
   min-height: 100vh;
   @include m.center;
+  @include m.border(2px, solid, blue);
   height: 100vh;
-  min-height: 560px;
+  min-height: 56rem;
   padding: 2rem;
   gap: 6rem;
 
   /* CAJA DE DALE PLAY */
   &__box-play {
-    width: 80px;
-    height: 90px;
+    width: 8rem;
+    height: 9rem;
     gap: 2rem;
     @include m.border;
     @include m.center;
 
     .icon {
-      width: 40px;
-      height: 40px;
+      width: 4rem;
+      height: 4rem;
       border-radius: 50%;
       position: relative;
       @include m.center;
@@ -29,8 +29,8 @@
 
       &:after {
         content: '';
-        width: 15px;
-        height: 15px;
+        width: 1.5rem;
+        height: 1.5rem;
         clip-path: polygon(25% 10%, 25% 85%, 94% 48%);
         background: white;
       }
@@ -42,69 +42,77 @@
     }
   }
 
+
+
+
   /* CAJA DEL LOGO */
   &__box-logo {
-    width: clamp(250px, 80%, 600px);
+    width: clamp(25rem, 80%, 60rem);
     @include m.border;
     @include m.center;
     justify-content: space-between;
     aspect-ratio: 1.7/1;
 
-    h2 {
-      font-family: f.$font-secondary;
-      letter-spacing: 6px;
-      font-weight: 200;
-      font-size: clamp(2rem, 4vw, 3rem);
-      text-transform: uppercase;
+    .container-letters {
+      @include m.border;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      h2 {
+        font-family: f.$font-secondary;
+        font-weight: 200;
+        font-size: clamp(2rem, 4vw, 3rem);
+        text-transform: uppercase;
+      }
     }
 
     h3 {
       font-family: f.$font-primary;
       font-weight: lighter;
-      letter-spacing: 5px;
+      letter-spacing: .5rem;
       position: relative;
       @include m.center;
-      font-size: clamp(3.7rem, 11vw, 10rem);
+      font-size: clamp(3.7rem, 11vw, 8.5rem);
 
       &::after {
         content: '&';
         // @include m.border;
         position: absolute;
         font-family: f.$font-quaternary;
-        transform: rotate(5deg) translateY(-5px);
+        transform: rotate(5deg) translateY(-.5rem);
         font-size: clamp(8.2rem, 20vw, 18rem);
         left: 33%;
       }
     }
   }
 
-  @media (min-width: 500px) {
-    &__box-logo {
-      h2 {
-        letter-spacing: 14px;
-      }
-    }
-  }
-
   @media (min-width: 800px) {
     &__box-logo {
-      h2 {
-        font-size: clamp(2rem, 4vw, 3rem);
-        letter-spacing: 29px;
-        margin-right: -20px;
+      .container-letters h2 {
+        font-size: clamp(2rem, 4vw, 2.8rem);
+      }
+
+      h3 {
+        letter-spacing: 1.6rem;
+        margin-left: 2rem;
       }
     }
   }
 
   @media (min-width: 1024px) {
     &__box-logo {
-      min-height: 300px;
+      aspect-ratio: 2/1;
+      min-height: 28rem;
     }
   }
 
+
+
+
   /* CAJA DEL TIEMPO RESTANTE */
   &__box-time {
-    width: clamp(250px, 80%, 400px);
+    width: clamp(25rem, 80%, 40rem);
     @include m.border;
     @include m.center;
     justify-content: space-between;
@@ -114,7 +122,7 @@
       font-size: 2rem;
       font-family: f.$font-secondary;
       font-weight: 100;
-      letter-spacing: 4px;
+      letter-spacing: .4rem;
     }
 
     div {

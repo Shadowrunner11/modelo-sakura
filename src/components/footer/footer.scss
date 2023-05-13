@@ -1,8 +1,37 @@
+@use '/src/styles/colors.scss' as c;
+@use '/src/styles/fonts.scss' as f;
 @use '/src/styles/mixins.scss' as m;
 
 .footer {
   border: 1px dashed green;
-  height: 400px;
-
   @include m.center;
+  padding: 15rem 0 5rem;
+
+  &__container {
+    @include m.center;
+    @include m.border;
+    gap: 4rem;
+
+    h2 {
+      font-family: f.$font-secondary;
+      text-transform: uppercase;
+      font-weight: 200;
+      font-size: clamp(1.6rem, 5vw, 3rem);
+      letter-spacing: clamp(.5rem, 7vw, .6rem);
+      @include m.border;
+    }
+
+    h3 {
+      font-family: f.$font-primary;
+      text-transform: uppercase;
+      font-size: clamp(3rem, 7vw, 4.8rem);
+      letter-spacing: .5rem;
+      font-weight: 500;
+      @include m.border;
+    }
+
+    button {
+      @include m.button
+    }
+  }
 }
