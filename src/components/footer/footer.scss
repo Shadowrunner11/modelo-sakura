@@ -103,7 +103,7 @@
 
     .img-1 {
       left: 0;
-      background: url('../assets/flores/flor1.png');
+      background: url('/assets/flores/flor1.png');
       background-size: cover;
       width: 330px;
       transform: rotate(-25deg) translateX(85px) translateY(70px);
@@ -111,7 +111,7 @@
 
     .img-2 {
       left: 0;
-      background: url('../assets/flores/flor1.png');
+      background: url('/assets/flores/flor1.png');
       background-size: cover;
       width: 400px;
       transform: translateY(120px) rotateZ(15deg) translateX(-40px);
@@ -122,7 +122,7 @@
       right: 0;
       height: 210px;
       transform: translateX(-100px) translateY(80px) rotateZ(-15deg);
-      background: url('../assets/flores/flor2.png');
+      background: url('/assets/flores/flor2.png');
       background-size: cover;
     }
 
@@ -131,7 +131,7 @@
       height: 200px;
       width: 330px;
       transform: rotateZ(30deg) translateY(-50px) translateX(40px);
-      background: url('../assets/flores/flor2.png');
+      background: url('/assets/flores/flor2.png');
       background-size: cover;
     }
   }
