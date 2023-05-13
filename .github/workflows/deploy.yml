@@ -20,6 +20,7 @@ jobs:
 
     # DEFINIR LOS PASOS NECESARIOS PARA LA EJECUCIÓN DE LA ACCIÓN
     steps:
+      # CLONAR EL REPOSITORIO
       - name: DESCARGA EL CÓDIGO DE GITHUB AL ESPACIO DE TRABAJO ACTUAL
         uses: actions/checkout@v3
 
@@ -32,13 +33,18 @@ jobs:
       - name: INSTALAR YARN
         run: npm install -g yarn
 
-      - name: BUILDEAR EL PROYECTO
+      - name: INSTALAR DEPENDENCIAS DE NODE CON YARN - congelando la resolución de dependencias en el archivo yarn.lock
         run: |
           yarn install --frozen-lockfile
+
+      - name: BUILDEAR EL PROYECTO
+        run: |
           yarn build
           touch dist/.nojekyll
 
-      - name: DEPLOYAR EL PROYECTO
+      # .nojekyll Este archivo indica a GitHub Pages que no aplique Jekyll al sitio web, lo cual puede causar problemas de visualización si el sitio no está construido con Jekyll.
+
+      - name: DESPLEGAR EL PROYECTO, LA CARPETA DIST EN LA RAMA GH-PAGES
         # https://github.com/JamesIves/github-pages-deploy-action
         uses: JamesIves/github-pages-deploy-action@v4
         with:
