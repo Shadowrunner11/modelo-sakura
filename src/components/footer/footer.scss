@@ -1,0 +1,8 @@
+@use '/src/styles/mixins.scss' as m;
+
+.footer {
+  border: 1px dashed green;
+  height: 300px;
+
+  @include m.center;
+}

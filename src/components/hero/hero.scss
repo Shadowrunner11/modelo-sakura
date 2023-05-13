@@ -1,0 +1,8 @@
+@use '/src/styles/mixins.scss' as m;
+
+.hero {
+  border: 1px dashed red;
+  min-height: 100vh;
+
+  @include m.center;
+}
