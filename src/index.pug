@@ -5,24 +5,11 @@ html(lang="es")
     meta(http-equiv="X-UA-Compatible" content="IE=edge")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     title MODELO SAKURA
+    //- SASS
     link(rel="stylesheet" href="./styles/index.scss")
-    //- FUENTE: Cinzel
-    link(rel="preconnect" href="https://fonts.googleapis.com")
-    link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
-    link(href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&display=swap" rel="stylesheet")
-    //- FUENTE: Noto Serif Japanese
-    link(rel="preconnect" href="https://fonts.googleapis.com")
-    link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
-    link(href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400&display=swap" rel="stylesheet")
-    //- FUENTE: questrial
-    link(rel="preconnect" href="https://fonts.googleapis.com")
-    link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
-    link(href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet")
-    //- FUENTE: Explora
-    link(rel="preconnect" href="https://fonts.googleapis.com")
-    link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
-    link(href="https://fonts.googleapis.com/css2?family=Explora&display=swap" rel="stylesheet")
-  body
-    include components/hero/hero.pug
-    include components/main/main.pug
-    include components/footer/footer.pug
+    //- FUENTES DE TEXTOS
+    include partials/fonts/fonts.pug
+body
+  include components/hero/hero.pug
+  include components/main/main.pug
+  include components/footer/footer.pug
