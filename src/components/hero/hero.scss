@@ -82,9 +82,9 @@
         // @include m.border;
         position: absolute;
         font-family: f.$font-quaternary;
-        transform: rotate(5deg) translateY(-.5rem);
+        transform: rotate(0deg) translateY(-1rem);
         font-size: clamp(8.2rem, 20vw, 18rem);
-        left: 33%;
+        left: 32.5%;
       }
     }
   }
@@ -135,6 +135,11 @@
     }
   }
 
+
+
+
+
+
   /* FONDO DE FLORES */
   &__back {
     // background: rgba(255, 0, 0, 0.379);
@@ -149,9 +154,15 @@
       width: 450px;
       height: 350px;
       // background-color: #cccccccf;
-      // @include m.border(2px, solid, violet);
+      @include m.border(2px, solid, violet);
       position: absolute;
     }
+
+
+
+
+
+    /* bloque 1 */
 
     .box-1 {
       transform: translateY(-180px) translateX(-500px);
@@ -188,8 +199,44 @@
       }
     }
 
+
+
+    /* bloque 2 */
+
     .box-2 {
       transform: translateY(-180px) translateX(500px);
+
+      .img {
+        position: absolute;
+        // border: 1px solid red;
+      }
+
+      .img-1 {
+        width: 220px;
+        height: 220px;
+        transform: translateX(280px) rotateZ(230deg) translateY(0px);
+        background: url('../assets/flores/flor4.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+
+      .img-2 {
+        width: 380px;
+        height: 180px;
+        background: url('../assets/flores/flor1.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        transform: translateX(-30px) rotateZ(160deg) translateY(-220px);
+      }
+
+      .img-3 {
+        width: 380px;
+        height: 180px;
+        background: url('../assets/flores/flor1.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        transform: translateX(80px) rotateZ(200deg) translateY(-100px);
+      }
     }
 
     .box-3 {
