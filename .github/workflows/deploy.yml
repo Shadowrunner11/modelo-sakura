@@ -39,7 +39,7 @@ jobs:
 
       - name: BUILDEAR EL PROYECTO
         run: |
-          yarn build-gh-pages
+          yarn build
           touch dist/.nojekyll
 
       # .nojekyll Este archivo indica a GitHub Pages que no aplique Jekyll al sitio web, lo cual puede causar problemas de visualización si el sitio no está construido con Jekyll.
