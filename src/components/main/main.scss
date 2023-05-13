@@ -1,8 +1,7 @@
 @use '/src/styles/mixins.scss' as m;
 
 .main {
-  border: 1px dashed violet;
   min-height: 100vh;
-
   @include m.center;
+  @include m.border;
 }
