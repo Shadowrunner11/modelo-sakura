@@ -27,7 +27,7 @@ jobs:
       - name: INSTALA LA VERSIÓN 16 DE NODE.JS Y ESTABLECE EL CACHÉ NPM.
         uses: actions/setup-node@v2
         with:
-          node-version: 19.9.0
+          node-version: 16
           cache: npm
 
       - name: INSTALAR YARN
@@ -39,7 +39,7 @@ jobs:
 
       - name: BUILDEAR EL PROYECTO
         run: |
-          yarn build
+          yarn build-gh-pages
           touch dist/.nojekyll
 
       # .nojekyll Este archivo indica a GitHub Pages que no aplique Jekyll al sitio web, lo cual puede causar problemas de visualización si el sitio no está construido con Jekyll.
