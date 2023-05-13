@@ -10,8 +10,10 @@ html(lang="es")
 
     include utils/fonts.pug
 
-    script(src="./ts/main.ts", type="module", defer)
 body
   include components/hero/hero.pug
   include components/main/main.pug
   include components/footer/footer.pug
+
+
+  script(src="./ts/main.ts", type="module")
