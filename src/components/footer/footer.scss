@@ -12,7 +12,7 @@
   &__container {
     @include m.center;
     @include m.border;
-    gap: 4rem;
+    gap: 3rem;
     z-index: 1;
 
     h2 {
@@ -45,10 +45,16 @@
     }
 
     button {
-      @include m.button
+      @include m.button;
     }
+
   }
 
+  @media (min-width: 720px) {
+    &__container button {
+      margin-top: 1rem;
+    }
+  }
 
   /* FONDO */
   &__back {
@@ -60,6 +66,7 @@
     width: 1200px;
     @include m.center;
     scale: .5;
+    flex-direction: row;
 
     @media (min-width: 420px) {
       scale: .8;
@@ -69,44 +76,61 @@
       scale: 1;
     }
 
+    /* BOXS */
+    .box {
+      width: 400px;
+      height: 300px;
+      @include m.border;
+    }
+
+    .box-1 {
+      transform: translateX(-200px);
+
+    }
+
+    .box-2 {
+      transform: translateX(200px);
+    }
+
+    /* IMGS */
+
     .img {
-      width: 300px;
+      width: 310px;
       height: 120px;
       position: absolute;
+      @include m.border;
     }
 
     .img-1 {
       left: 0;
-      // border: 1px solid red;
       background: url('../assets/flores/flor1.png');
       background-size: cover;
       width: 330px;
-      transform: rotate(-25deg) translateX(85px) translateY(-10px);
+      transform: rotate(-25deg) translateX(85px) translateY(70px);
     }
 
     .img-2 {
       left: 0;
-      // border: 1px solid blue;
       background: url('../assets/flores/flor1.png');
       background-size: cover;
-      width: 380px;
-      transform: translateY(50px) rotateZ(15deg) translateX(-40px);
+      width: 400px;
+      transform: translateY(120px) rotateZ(15deg) translateX(-40px);
+      height: 140px;
     }
 
     .img-3 {
       right: 0;
-      // border: 1px solid red;
-      height: 200px;
-      transform: translateX(-100px) translateY(40px) rotateZ(-5deg);
+      height: 210px;
+      transform: translateX(-100px) translateY(80px) rotateZ(-15deg);
       background: url('../assets/flores/flor2.png');
       background-size: cover;
     }
 
     .img-4 {
       right: 0;
-      // border: 1px solid blue;
       height: 200px;
-      transform: rotateZ(30deg) translateY(-60px) translateX(20px);
+      width: 330px;
+      transform: rotateZ(30deg) translateY(-50px) translateX(40px);
       background: url('../assets/flores/flor2.png');
       background-size: cover;
     }
