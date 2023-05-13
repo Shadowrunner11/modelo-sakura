@@ -10,5 +10,8 @@
   "scripts": {
     "dev": "parcel src/index.pug",
     "build": "parcel build src/*.pug --public-url ./"
+  },
+  "dependencies": {
+    "scrollreveal": "^4.0.9"
   }
 }

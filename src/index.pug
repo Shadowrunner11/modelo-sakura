@@ -8,8 +8,11 @@ html(lang="es")
     //- SASS
     link(rel="stylesheet" href="./styles/index.scss")
     //- FUENTES DE TEXTOS
-    include partials/fonts/fonts.pug
+    include utils/fonts.pug
+    //- SCROLLREVEAL
+    script(src="https://unpkg.com/scrollreveal")
 body
   include components/hero/hero.pug
   include components/main/main.pug
   include components/footer/footer.pug
+  include utils/animation.pug
