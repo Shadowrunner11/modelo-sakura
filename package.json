@@ -1,5 +1,5 @@
 {
-  "name": "parcel-prueba",
+  "name": "modelo-sakura",
   "version": "1.0.0",
   "license": "MIT",
   "devDependencies": {
@@ -8,7 +8,7 @@
     "parcel": "^2.8.3"
   },
   "scripts": {
-    "dev": "parcel src/*.pug",
-    "build": "parcel build src/*.pug --public-url /prueba-pug"
+    "dev": "parcel src/index.pug",
+    "build": "parcel build src/*.pug --public-url ./"
   }
 }

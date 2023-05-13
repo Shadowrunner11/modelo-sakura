@@ -1,12 +1,10 @@
 @use './reset.scss';
 @use './colors.scss' as c;
-@use './fonts.scss' as f;
 
 /* COMPONENTS */
 @use '../components/hero/hero.scss';
 @use '../components/main/main.scss';
 @use '../components/footer/footer.scss';
-
 
 body {
   background: c.$page-bg;

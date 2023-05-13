@@ -36,9 +36,6 @@ jobs:
       - name: INSTALAR DEPENDENCIAS DE NODE CON YARN - congelando la resolución de dependencias en el archivo yarn.lock
         run: |
           yarn install --frozen-lockfile
-
-      - name: BUILDEAR EL PROYECTO
-        run: |
           yarn build
           touch dist/.nojekyll
 
